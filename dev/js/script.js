@@ -31,7 +31,7 @@ function displayMatches() {
 
       return `
         <li>
-          <span class="list-item">${personName}, ${personCompany}</span>
+          <span class="list-item">${personName},<br>${personCompany}</span>
         </li>
       `;
     })
@@ -40,8 +40,8 @@ function displayMatches() {
   list.innerHTML = html;
 }
 
-const searchInput = document.querySelector('.search');
-const list = document.querySelector('.list');
+const searchInput = document.querySelector('.search-field');
+const list = document.querySelector('.search-list');
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
